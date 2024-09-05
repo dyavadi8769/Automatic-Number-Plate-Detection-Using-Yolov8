@@ -74,7 +74,9 @@ docs/_build/
 # PyBuilder
 .pybuilder/
 target/
-
+data/
+license_plate_detector.pt
+test.mp4
 # Jupyter Notebook
 .ipynb_checkpoints
 

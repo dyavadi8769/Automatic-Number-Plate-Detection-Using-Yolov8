@@ -1,0 +1,8 @@
+path: C:/Users/DYAVADI/Desktop/DataScience/GitHub/ComputerVision/Automatic-Number-Plate-Detection-Using-Yolov8/data
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+
+names:
+  0: License_Plate
