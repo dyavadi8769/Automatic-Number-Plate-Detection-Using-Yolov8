@@ -6,7 +6,7 @@
 - Use the CVAT online tool to annotate the images for number plate detection.
 - Export the annotations in a YOLO-compatible format for seamless integration with the YOLOv8 model.
 
-2. **Annotation with CVAT:**
+2. **Organizing the Dataset:**
 - Prepare the dataset directory structure with subfolders for training, validation, and testing images.
 
 3. **Configuration File (config.yaml):**
