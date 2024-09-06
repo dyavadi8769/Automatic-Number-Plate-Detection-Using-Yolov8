@@ -29,6 +29,25 @@ yolo detect train data=yolov8_trained_model\config.yaml model=yolov8n.yaml epoch
 
 ```
 
+## Vehicle and License Plate Detection
+
+- YOLOv8 is used to detect vehicles (cars, buses, trucks) and license plates in each frame.
+- SORT Tracker: Vehicle detection results are passed to the SORT tracking algorithm to track vehicles across multiple frames.
+- License Plate Assignment: License plates are detected and matched with the corresponding vehicle using bounding box coordinates.
+
+## Data Interpolation and Missing Data Handling
+
+- Bounding Box Interpolation: Missing bounding boxes for vehicles and license plates are interpolated using linear interpolation.
+- SciPy Interpolation: The interp1d function from SciPy is used to fill gaps between frames, ensuring continuous tracking of vehicles and license plates.
+- Data Output: The final results, including interpolated bounding boxes and license plate text, are saved to a CSV file.
+
+## Visualization and Video Output
+
+- OpenCV Visualization: Bounding boxes for vehicles and license plates are drawn on the video frames. License plate text and cropped license plate images are displayed near the detected vehicles.
+- Video Export: The processed frames, with bounding boxes and license plate annotations, are exported as a new video using OpenCV's VideoWriter.
+- Display License Plate: License plate numbers are placed above each corresponding vehicle, and the license plate crops are superimposed on the video frames for visual clarity.
+
+
 
 ## Video:
 
@@ -37,4 +56,42 @@ yolo detect train data=yolov8_trained_model\config.yaml model=yolov8n.yaml epoch
 ```
 https://www.pexels.com/video/traffic-flow-in-the-highway-2103099/
 
+```
+
+
+## Commands to Setup Project on Local Machine
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/dyavadi8769/Automatic-Number-Plate-Detection-Using-Yolov8.git
+   cd Automatic-Number-Plate-Detection-Using-Yolov8
+
+2.  **Create a virtual environment and activate it:**
+    ```bash
+    conda create -p env python==3.10 -y
+    conda activate env/ 
+
+3.  **Install the Required Dependecies:**
+    ```bash
+    pip install -r requirements.txt
+
+4. **Run the main.py to generate test.csv :**
+    ```bash
+    python main.py
+
+5. **Run add_missing_data.py to add the missing data:**
+    ```bash
+    python add_missing_data.py
+
+6. **Visualize the data by running visualize.py and generating out.mp4:**
+    ```bash
+    python visualize.py
+
+
+# Author:
+
+```bash
+Author: Sai Kiran Reddy Dyavadi
+Role  : Data Scientist
+Email : dyavadi324@gmail.com
 ```
