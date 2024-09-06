@@ -28,3 +28,13 @@
 yolo detect train data=yolov8_trained_model\config.yaml model=yolov8n.yaml epochs=1
 
 ```
+
+
+## Video:
+
+1. The Video used in this project can be downloaded using the following link: 
+
+```
+https://www.pexels.com/video/traffic-flow-in-the-highway-2103099/
+
+```

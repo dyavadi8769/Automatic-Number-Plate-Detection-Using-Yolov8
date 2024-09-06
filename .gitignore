@@ -136,6 +136,12 @@ venv.bak/
 # Spyder project settings
 .spyderproject
 .spyproject
+test.csv
+yolov8n.pt
+test_interpolated.csv
+out.mp4
+models/
+sort/
 
 # Rope project settings
 .ropeproject
